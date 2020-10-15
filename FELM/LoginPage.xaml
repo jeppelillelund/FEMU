@@ -10,10 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black" Offset="0"/>
-                <GradientStop Color="#FFEC2626" Offset="1"/>
-            </LinearGradientBrush>
+            <ImageBrush ImageSource="Pic/festival_1.png"/>
         </Grid.Background>
         <Grid>
 
@@ -31,80 +28,115 @@
 
             <Grid Grid.Row="0"
                   Grid.Column="0"
-                 
-                  
-                  />
+            >
+                <Grid.Background>
+                    <ImageBrush ImageSource="logo_festival-el.png"/>
+                </Grid.Background>
+            </Grid>
             <Grid Grid.Row="1"
                   Grid.Column="0"
-                 
-                  
             />
             <Grid Grid.Row="2"
                   Grid.Column="0"
-                  
-                  
             />
             <Grid Grid.Row="0"
                   Grid.Column="1"
-                 
-                  
             />
+
             <Grid Grid.Row="1"
                   Grid.Column="1"
+
+                />
+            <Grid Grid.Row="2"
+                  Grid.Column="1"
             />
-            
+            <Grid Grid.Row="0"
+                  Grid.Column="2"
+            />
+            <Grid Grid.Row="1"
+                  Grid.Column="2"
+            />
+            <Grid Grid.Row="2"
+                  Grid.Column="2"
+            />
+            <Border
+                Grid.Row="1"
+                Grid.Column="1"
+                
+                Padding="1" 
+                CornerRadius="25" 
+                BorderThickness="0" 
+                BorderBrush="#FF008D7A" 
+                SnapsToDevicePixels="True"
+                Background="#FF002657"
+                Opacity="0.5">
+
+                <Border.Effect>
+                    <DropShadowEffect></DropShadowEffect>
+                </Border.Effect>
+            </Border>
             
 
-            <Grid Grid.Row="2"
-                  Grid.Column="1"
-                  
-                  
-            />
-            <Grid Grid.Row="0"
-                  Grid.Column="2"
-                  
-                  
-            />
-            <Grid Grid.Row="1"
-                  Grid.Column="2"
-                  
-                  
-            />
-            <Grid Grid.Row="2"
-                  Grid.Column="2"
-                  
-            />
             <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
 
                 <Label Name="Header" 
-                       Content="Login" 
-                       Background="White" 
+                       Content="Enter Login" 
+                       Foreground="#FF008D7A"
                        VerticalContentAlignment="Center" 
                        HorizontalContentAlignment="Center"
                        Margin="0,10"
-                >
-                </Label>
+                       FontSize="24"
+                       
+                />
 
                 <Label Name="Username" 
-                       Content="UserName" 
-                       Background="White" 
+                       Content="UserName:" 
+                       Foreground="#FF008D7A"
                        VerticalContentAlignment="Center" 
-                       HorizontalContentAlignment="Center"
-                       Margin="0,10"
+                       HorizontalContentAlignment="Left"
+                       Margin="15,10"
                 >
                 </Label>
-                <TextBox Name="LoginTextBox" Margin="10" Height="30"></TextBox>
-                <Label Name="Password" 
-                       Content="Password" 
-                       Background="White" 
-                       HorizontalContentAlignment="Center" 
-                       VerticalContentAlignment="Center"
-                       Margin="0,10"
-                >
-                </Label>
-                <TextBox Name="PasswordTextBox" Margin="10" Height="30"></TextBox>
+                <Border 
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    BorderBrush="LightGray" 
+                    SnapsToDevicePixels="True" 
+                    Background="White" 
+                    Margin="15,1"
+                    >
+                    
 
-                <Button Content="Login" Click="Button_Click_3"></Button>
+                    <TextBox Name="LoginTextBox"  
+                             Background="Transparent" 
+                             BorderThickness="0"
+                             
+
+                             
+                    ></TextBox>
+                </Border>
+                <Label Name="Password" 
+                       Content="Password:" 
+                       Foreground="#FF008D7A"
+                       HorizontalContentAlignment="Left" 
+                       VerticalContentAlignment="Center"
+                       Margin="15,1"
+                >
+                </Label>
+                <Border 
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    BorderBrush="LightGray" 
+                    SnapsToDevicePixels="True" 
+                    Background="White"
+                    Margin="15,1">
+
+                    <TextBox Name="PasswordTextBox"></TextBox>
+                </Border>
+
+                <Button Content="Log in" Click="Button_Click_3" Margin="10" Background="#FF3D79B5" BorderThickness="2"></Button>
             </StackPanel>
 
         </Grid>
