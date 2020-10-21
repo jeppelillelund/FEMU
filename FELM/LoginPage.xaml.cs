@@ -20,36 +20,20 @@ namespace FELM
     /// </summary>
     public partial class LoginPage : Page
     {
-        LoginMechanics LoginMe = new LoginMechanics();
+        API apiLogin = new API();
         public LoginPage()
         {
+
             InitializeComponent();
         }
-        private  void Button_Click_3(object sender, RoutedEventArgs e)
+        private async void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            if(LoginMe.getUser(LoginTextBox.Text, PasswordTextBox.Text))
+            var loginVerified = await apiLogin.LoginQuery(LoginTextBox.Text, PasswordTextBox.Text);
+            if (loginVerified)
             {
                 NavigationService.Navigate(Pages.p5);
             }
         }
     }
-    public class LoginMechanics
-    {
-
-        public bool getUser(string userName, string password)
-        {
-            string internalUserName = "Michael";
-            string internalPassword = "Password";
-
-            if (userName == internalUserName && password == internalPassword)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-    }
+   
 }
