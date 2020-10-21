@@ -133,23 +133,10 @@
                     Background="White"
                     Margin="15,1">
 
-                    <TextBox Name="PasswordTextBox"
-                             Background="Transparent" 
-                             BorderThickness="0">
-
-                    </TextBox>
+                    <TextBox Name="PasswordTextBox"></TextBox>
                 </Border>
-                <Border 
-                    Padding="5" 
-                    CornerRadius="5" 
-                    BorderThickness="1" 
-                    SnapsToDevicePixels="True" 
-                    Background="#FF008D7A"
-                    Margin="15,15">
 
-                    <Button Content="Log in" Click="Button_Click_3" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF"></Button>
-                </Border>
-                
+                <Button Content="Log in" Click="Button_Click_3" Margin="10" Background="#FF3D79B5" BorderThickness="2"></Button>
             </StackPanel>
 
         </Grid>
