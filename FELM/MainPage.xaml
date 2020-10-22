@@ -10,10 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black" Offset="0"/>
-                <GradientStop Color="White" Offset="1"/>
-            </LinearGradientBrush>
+            <ImageBrush ImageSource="Pic/festival_1.png"/>
         </Grid.Background>
         <Grid>
 
@@ -56,16 +53,44 @@
             <Grid Grid.Row="2"
                   Grid.Column="2"
             />
-            <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" >
-                <Button Content="UserPage"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" Click="Button_Click_1"/>
-                <Button Content="ScanPage"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" Click="Button_Click_2"/>
-                <Button Content="EventPage" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" Click="Button_Click"/>
+            <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,45,10,25" Width="247" Height="200" >
+                <Border
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    SnapsToDevicePixels="True" 
+                    Background="#FF008D7A"
+                    Margin="15,15"
+                    >
+                    <Button Content="UserPage"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" Click="Button_Click_1" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF"/>
+                </Border>
+
+                <Border
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    SnapsToDevicePixels="True" 
+                    Background="#FF008D7A"
+                    Margin="15,15">
+                    <Button Content="ScanPage"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" Click="Button_Click_2" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF"/>
+                </Border>
+
+                <Border
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    SnapsToDevicePixels="True" 
+                    Background="#FF008D7A"
+                    Margin="15,15">
+
+                    <Button Content="EventPage" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" Click="Button_Click" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF"/>
+                </Border>
 
             </StackPanel>
-            
+
         </Grid>
 
-            
+
 
     </Grid>
 </Page>
