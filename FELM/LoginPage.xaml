@@ -95,6 +95,7 @@
                        VerticalContentAlignment="Center" 
                        HorizontalContentAlignment="Left"
                        Margin="15,10"
+                       FontWeight="Bold"
                 >
                 </Label>
                 <Border 
@@ -122,6 +123,7 @@
                        HorizontalContentAlignment="Left" 
                        VerticalContentAlignment="Center"
                        Margin="15,1"
+                       FontWeight="Bold"
                 >
                 </Label>
                 <Border 
@@ -131,12 +133,15 @@
                     BorderBrush="LightGray" 
                     SnapsToDevicePixels="True" 
                     Background="White"
-                    Margin="15,1">
+                    Margin="15,1"
+                    >
 
                     <TextBox Name="PasswordTextBox"></TextBox>
                 </Border>
 
-                <Button Content="Log in" Click="Button_Click_3" Margin="10" Background="#FF3D79B5" BorderThickness="2"></Button>
+                    <Button Content="Log in" Click="Button_Click_3" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF"></Button>
+                </Border>
+                
             </StackPanel>
 
         </Grid>
