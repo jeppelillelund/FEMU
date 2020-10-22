@@ -20,7 +20,7 @@ namespace FELM
     /// </summary>
     public partial class LoginPage : Page
     {
-        API apiLogin = new API();
+        API Api = new API();
         public LoginPage()
         {
 
@@ -28,9 +28,16 @@ namespace FELM
         }
         private async void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            var loginVerified = await apiLogin.LoginQuery(LoginTextBox.Text, PasswordTextBox.Text);
-            if (loginVerified)
-            {
+            string[] result = {"false"};
+            string stringResult = await Api.LoginQueryAsync(LoginTextBox.Text, PasswordTextBox.Text);
+            try {
+                result = stringResult.Split(',');
+            }
+            catch (Exception error) {
+                Console.WriteLine(error);
+            }
+
+            if (result[0] == "true"){
                 NavigationService.Navigate(Pages.p5);
             }
         }

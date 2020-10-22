@@ -20,7 +20,7 @@ namespace FELM
         IGraphQLHttpClient client = GraphQLHttpClient.Default();
 
        
-        public async Task<bool> LoginQuery(string userName, string password)
+        public async Task<string> LoginQueryAsync(string userName, string password)
         {
 
 
@@ -30,14 +30,8 @@ namespace FELM
                 byte[] sourceBytes = Encoding.UTF8.GetBytes(password);
                 byte[] hashBytes = sha1Hash.ComputeHash(sourceBytes);
                 string hashedPassword = BitConverter.ToString(hashBytes).Replace("-", String.Empty);
-
-
-                Console.WriteLine("-----");
-                Console.WriteLine("-----");
+                
                 Console.WriteLine(hashedPassword);
-                Console.WriteLine("-----");
-                Console.WriteLine("-----");
-
             
                 var query = client.CreateQuery(builder =>
                     builder.Field("verifyLogin",
@@ -47,12 +41,11 @@ namespace FELM
                                 .Argument("password", "String", "password", true)
                                 ),
                                 "http://192.168.76.20:8080/",arguments: new[] { new GraphQLQueryArgument("username", userName), new GraphQLQueryArgument("password", hashedPassword) });
-                var builderResponse = await query.Execute();
-                Console.WriteLine("-----");
-                Console.WriteLine("-----");
-                Console.WriteLine(builderResponse["verifiedLogin"]);
-                return builderResponse["verifiedLogin"]["verified"];
-            
+                var response = await query.Execute();
+                string result = response["verifyLogin"];
+                return result;
+                // builderResponse["verifiedLogin"]["verified"] ? "true" : "false";
+
             }
         }
     }

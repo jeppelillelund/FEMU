@@ -110,7 +110,7 @@
 
                     <TextBox Name="LoginTextBox"  
                              Background="Transparent" 
-                             BorderThickness="0"
+                             BorderThickness="0" Text="admin"
                              
 
                              
@@ -133,7 +133,7 @@
                     Background="White"
                     Margin="15,1">
 
-                    <TextBox Name="PasswordTextBox"></TextBox>
+                    <TextBox Name="PasswordTextBox" Text="Password1"></TextBox>
                 </Border>
 
                 <Button Content="Log in" Click="Button_Click_3" Margin="10" Background="#FF3D79B5" BorderThickness="2"></Button>
