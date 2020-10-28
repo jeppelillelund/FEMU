@@ -29,5 +29,10 @@ namespace FELM
         {
             NavigationService.Navigate(Pages.p5);
         }
+
+        private void Historik_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
