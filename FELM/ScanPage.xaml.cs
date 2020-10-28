@@ -20,6 +20,7 @@ namespace FELM
     /// </summary>
     public partial class ScanPage : Page
     {
+        API Api = new API();
         public ScanPage()
         {
             InitializeComponent();
@@ -30,9 +31,16 @@ namespace FELM
             NavigationService.Navigate(Pages.p5);
         }
 
-        private void Historik_Click(object sender, RoutedEventArgs e)
+        private async void Historik_Click(object sender, RoutedEventArgs e)
         {
+            string stringResult = await Api.AllEventsQueryAsync();
+            Console.WriteLine(stringResult);
+        }
 
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string stringResult = await Api.AllEventsQueryAsync();
+            Console.WriteLine(stringResult);
         }
     }
 }

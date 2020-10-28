@@ -48,8 +48,18 @@ namespace FELM
 
             }
         }
+
+        public async Task<string> AllEventsQueryAsync()
+        {
+                var query = client.CreateQuery(builder => builder.Field("GetAllEvents"), "http://192.168.76.20:8080/");
+                var response = await query.Execute();
+                string result = response["GetAllEvents"];
+                return result;
+                // builderResponse["verifiedLogin"]["verified"] ? "true" : "false";
+
+        }
     }
+}
     
 
 
-}
