@@ -69,9 +69,9 @@
                 <Border.Effect>
                     <DropShadowEffect></DropShadowEffect>
                 </Border.Effect>
-                <TextBlock Text="Evnts" RenderTransformOrigin="0.489,0.659" Grid.ColumnSpan="2" Grid.Row="2" Foreground="White" Margin="21,25,10,0"/>
+                <TextBlock Name="EventBlock" Text="Events" RenderTransformOrigin="0.489,0.659" Grid.ColumnSpan="2" Grid.Row="2" Foreground="White" Margin="21,25,10,0"/>
             </Border>
-
+            
             <Border
                 Grid.Row="1"
                 Grid.Column="0"
@@ -152,7 +152,7 @@
                     <Button Content="Start scanner"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF"/>
                 </Border>
             </StackPanel>
-           
+
             <Label Name="Lokalition" 
                        Content="Lokalition 0-99:" 
                        Foreground="White"
@@ -167,6 +167,9 @@
                  VerticalAlignment="Top"
                  Width="142"
                  Background="White" Grid.Column="1" Grid.Row="1" Margin="0,11,51,0"/>
+
+            <StackPanel Name="EventStackPanel" HorizontalAlignment="Left" Height="190" VerticalAlignment="Top" Width="162" Margin="50,75,0,0" Grid.Row="1"/>
+
         </Grid>
         <Grid Grid.Row="0"
             Grid.Column="0"
