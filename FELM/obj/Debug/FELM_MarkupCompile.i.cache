@@ -4,41 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-C:\Users\SDFa.skp\Documents\FEMU\FEMU\FELM\obj\Debug\
-=======
 C:\Users\WJKa.skp\Desktop\FEMU\FELM\obj\Debug\
->>>>>>> Stashed changes
-=======
-C:\Users\pnol.skp\Desktop\FELM\FEMU\FELM\obj\Debug\
->>>>>>> Aplication
 FELM
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-C:\Users\SDFa.skp\Documents\FEMU\FEMU\FELM\App.xaml
-6-299094951
-
-13253650088
-1281638632042
-=======
 C:\Users\WJKa.skp\Desktop\FEMU\FELM\App.xaml
 6-299094951
 
-12898887875
-13-1505183044
->>>>>>> Stashed changes
-=======
-C:\Users\pnol.skp\Desktop\FELM\FEMU\FELM\App.xaml
-6-299094951
-
 13253650088
-128-593538226
->>>>>>> Aplication
+1281100731294
 EventPage.xaml;LoginPage.xaml;MainPage.xaml;MainWindow.xaml;ScanPage.xaml;UserPage.xaml;
 
-False
+True
 

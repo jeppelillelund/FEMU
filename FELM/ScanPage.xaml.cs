@@ -40,7 +40,15 @@ namespace FELM
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             string stringResult = await Api.AllEventsQueryAsync();
+            string[] stringRArray = stringResult.Split(',');
             Console.WriteLine(stringResult);
+            for (int i = 0; i <= 2; i++)
+            {
+                Button newButton = new Button();
+                newButton.Content = stringRArray[i];
+                newButton.Click += (s, se) => {/*API CALL MM. her*/};
+                EventStackPanel.Children.Add(newButton);
+            }
         }
     }
 }
