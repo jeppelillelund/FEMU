@@ -50,7 +50,7 @@
                  Text=""
                  VerticalAlignment="Top"
                  Width="115"
-                 Background="White" Grid.ColumnSpan="2" Grid.Row="2" Margin="100,5,0,0"
+                 Background="White" Grid.ColumnSpan="2" Grid.Row="2" Margin="100,5,0,0" TextChanged="TextBox_TextChanged"
             />
 
             <Border
@@ -98,7 +98,7 @@
                         SnapsToDevicePixels="True" 
                         Background="#FF008D7A"
                         >
-                    <Button Content="Historik"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200"  FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF"/>
+                    <Button Content="Historik"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200"  FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="Button_Click"/>
                 </Border>
 
                 <Border CornerRadius="5" Padding="5" 
