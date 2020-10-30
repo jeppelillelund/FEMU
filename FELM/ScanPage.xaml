@@ -168,7 +168,7 @@
                  Width="142"
                  Background="White" Grid.Column="1" Grid.Row="1" Margin="0,11,51,0"/>
 
-            <StackPanel Name="EventStackPanel" HorizontalAlignment="Left" Height="190" VerticalAlignment="Top" Width="162" Margin="50,75,0,0" Grid.Row="1"/>
+            <StackPanel Name="EventStackPanel" HorizontalAlignment="Left" Height="190" VerticalAlignment="Top" Width="420" Margin="50,75,0,0" Grid.Row="1"/>
 
         </Grid>
         <Grid Grid.Row="0"

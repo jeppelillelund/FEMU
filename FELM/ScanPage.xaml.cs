@@ -41,11 +41,33 @@ namespace FELM
         {
             string stringResult = await Api.AllEventsQueryAsync();
             string[] stringRArray = stringResult.Split(',');
+
+            var bc = new BrushConverter();
+
             Console.WriteLine(stringResult);
-            for (int i = 0; i <= 2; i++)
+            EventStackPanel.Children.Clear();
+            for (int i = 0; i <= 1; i++)
             {
                 Button newButton = new Button();
+                if(i % 2 == 0) 
+                {
+                    newButton.Background = (Brush)bc.ConvertFrom("#00b5a3");
+                }
+                else
+                {
+                    newButton.Background = (Brush)bc.ConvertFrom("#017056");
+                }
+
+                newButton.Name = $"eventbutton{i}";
                 newButton.Content = stringRArray[i];
+                newButton.Width = 420;
+                newButton.HorizontalAlignment = HorizontalAlignment.Center;
+                newButton.VerticalAlignment = VerticalAlignment.Center;
+                newButton.FontWeight = FontWeights.Bold;
+                newButton.BorderThickness = new Thickness(0);
+                newButton.Foreground = (Brush)bc.ConvertFrom("#FFFFFF");
+                newButton.Margin = new Thickness(0, 10, 0, 0);
+
                 newButton.Click += (s, se) => {/*API CALL MM. her*/};
                 EventStackPanel.Children.Add(newButton);
             }
