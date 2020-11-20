@@ -140,7 +140,7 @@
                         Width="100"
                         Margin="0,10"
                         >
-                    <Button x:Name="Button" Content="Log in" Click="Button_Click_3" Background="#FF008D7A" FontWeight="Bold" BorderThickness="0" Foreground="#FFFFFF"></Button>
+                    <Button x:Name="Button" Content="Log in" Click="Login_Button" Background="#FF008D7A" FontWeight="Bold" BorderThickness="0" Foreground="#FFFFFF"></Button>
                 </Border>
             </StackPanel>
 

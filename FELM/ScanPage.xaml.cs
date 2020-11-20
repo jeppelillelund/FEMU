@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Drawing;
+using Newtonsoft.Json.Linq;
 
 namespace FELM
 {
@@ -20,6 +22,8 @@ namespace FELM
     /// </summary>
     public partial class ScanPage : Page
     {
+        bool ToggleFavorit = false;
+
         API Api = new API();
         public ScanPage()
         {
@@ -31,22 +35,17 @@ namespace FELM
             NavigationService.Navigate(Pages.p5);
         }
 
-        private async void Historik_Click(object sender, RoutedEventArgs e)
-        {
-            string stringResult = await Api.AllEventsQueryAsync();
-            Console.WriteLine(stringResult);
-        }
+        
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private async void history_Button(object sender, RoutedEventArgs e)
         {
-            string stringResult = await Api.AllEventsQueryAsync();
-            string[] stringRArray = stringResult.Split(',');
+            JArray stringResult = await Api.AllEventsQueryAsync();
 
             var bc = new BrushConverter();
 
             Console.WriteLine(stringResult);
             EventStackPanel.Children.Clear();
-            for (int i = 0; i <= 1; i++)
+            for (int i = 0; i < stringResult.Count(); i++)
             {
                 Button newButton = new Button();
                 if(i % 2 == 0) 
@@ -59,7 +58,7 @@ namespace FELM
                 }
 
                 newButton.Name = $"eventbutton{i}";
-                newButton.Content = stringRArray[i];
+                newButton.Content = stringResult[i].First.First;
                 newButton.Width = 420;
                 newButton.HorizontalAlignment = HorizontalAlignment.Center;
                 newButton.VerticalAlignment = VerticalAlignment.Center;
@@ -68,9 +67,82 @@ namespace FELM
                 newButton.Foreground = (Brush)bc.ConvertFrom("#FFFFFF");
                 newButton.Margin = new Thickness(0, 10, 0, 0);
 
+
                 newButton.Click += (s, se) => {/*API CALL MM. her*/};
                 EventStackPanel.Children.Add(newButton);
             }
+        }
+
+        private async void Favorit_Button(object sender, RoutedEventArgs e)
+        {
+            if(ToggleFavorit == false)
+            {
+                JArray stringResult = await Api.AllFavoritsQuery();
+                //string[] stringRArray = new string[] { "hej", "nope", "hypsa" };
+
+                var bc = new BrushConverter();
+
+                 //Console.WriteLine(stringResult);
+                FavoritBorder.Visibility = Visibility.Visible;
+                FavoritStackPanel.Children.Clear();
+                for (int i = 0; i < stringResult.Count(); i++)
+                {
+                    Button newButton = new Button();
+                    Tilføj_vare popup = new Tilføj_vare();
+                    if (i % 2 == 0)
+                    {
+                        newButton.Background = (Brush)bc.ConvertFrom("#00b5a3");
+                    }
+                    else
+                    {
+                        newButton.Background = (Brush)bc.ConvertFrom("#017056");
+                    }
+
+                    newButton.Name = $"FavoritButton{i}";
+                    newButton.Content = stringResult[i].First.First;
+                    newButton.Width = 420;
+                    newButton.HorizontalAlignment = HorizontalAlignment.Center;
+                    newButton.VerticalAlignment = VerticalAlignment.Center;
+                    newButton.FontWeight = FontWeights.Bold;
+                    newButton.BorderThickness = new Thickness(0);
+                    newButton.Foreground = (Brush)bc.ConvertFrom("#FFFFFF");
+                    newButton.Margin = new Thickness(0, 10, 0, 0);
+
+                    popup.Vare_Label.Content = stringResult[i].First.First;
+
+
+                    newButton.Click += (s, se) => 
+                    {
+                        popup.ShowDialog();
+                    };
+                    FavoritStackPanel.Children.Add(newButton);
+
+
+
+                    ToggleFavorit = true;
+                }
+            }
+            else if(ToggleFavorit == true)
+            {
+                FavoritBorder.Visibility = Visibility.Hidden;
+                ToggleFavorit = false;
+            }
+
+        }
+
+        private async void Antenne_Button(object sender, RoutedEventArgs e)
+        {
+            JArray hypsa = await Api.GetItemsQueryAsync();
+        }
+
+        private void Toggle_Aflevering_Button(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Start_Scanner(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

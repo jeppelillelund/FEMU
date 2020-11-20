@@ -1,0 +1,17 @@
+﻿<Window x:Class="FELM.Tilføj_vare"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FELM"
+        mc:Ignorable="d"
+        Title="Tilføj_vare" Height="150" Width="250">
+    <Grid>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" Width="76" Click="Add_Button"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="158,91,0,0" VerticalAlignment="Top" Width="76" Click="Cancel_Button"/>
+        <TextBox x:Name="Antal_TextBox" HorizontalAlignment="Left" Height="24" Margin="63,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Antal" HorizontalAlignment="Left" Margin="100,31,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Vare_Label" Content="" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

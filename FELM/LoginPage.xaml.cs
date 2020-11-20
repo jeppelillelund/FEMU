@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,21 +24,21 @@ namespace FELM
         API Api = new API();
         public LoginPage()
         {
-
             InitializeComponent();
         }
-        private async void Button_Click_3(object sender, RoutedEventArgs e)
+        private async void Login_Button(object sender, RoutedEventArgs e)
         {
-            string[] result = {"false"};
-            string stringResult = await Api.LoginQueryAsync(LoginTextBox.Text, PasswordTextBox.Text);
+            string[] result = { "false" };
+            JObject stringResult = await Api.LoginQueryAsync(LoginTextBox.Text, PasswordTextBox.Text);
+            String status = (string)stringResult.First.First;
             try {
-                result = stringResult.Split(',');
+               // result = stringResult[0].First.First;
             }
             catch (Exception error) {
                 Console.WriteLine(error);
             }
 
-            if (result[0] == "true"){
+            if (status == "true"){
                 NavigationService.Navigate(Pages.p5);
             }
         }

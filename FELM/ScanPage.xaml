@@ -69,25 +69,28 @@
                 <Border.Effect>
                     <DropShadowEffect></DropShadowEffect>
                 </Border.Effect>
-                <TextBlock Name="EventBlock" Text="Events" RenderTransformOrigin="0.489,0.659" Grid.ColumnSpan="2" Grid.Row="2" Foreground="White" Margin="21,25,10,0"/>
+                <StackPanel Name="EventStackPanel" RenderTransformOrigin="0.489,0.659" Grid.ColumnSpan="2" Grid.Row="2"  Margin="21,25,10,0"/>
             </Border>
             
             <Border
+                Name="FavoritBorder"
                 Grid.Row="1"
                 Grid.Column="0"
-                
                 Padding="1" 
                 CornerRadius="25" 
                 BorderThickness="0" 
                 BorderBrush="#FF008D7A" 
                 SnapsToDevicePixels="True"
                 Background="#FF008D7A"
-                Margin="30">
+                Margin="30"
+                Visibility ="Hidden"
+                >
+                
 
                 <Border.Effect>
                     <DropShadowEffect></DropShadowEffect>
                 </Border.Effect>
-                <TextBlock Text="Favoritter" RenderTransformOrigin="0.489,0.659" Grid.ColumnSpan="2" Grid.Row="2" Foreground="White" Margin="21,25,10,0"/>
+                <StackPanel Name="FavoritStackPanel"   RenderTransformOrigin="0.489,0.659" Grid.ColumnSpan="2" Grid.Row="2"  Margin="21,25,10,0"/>
             </Border>
 
             <Border
@@ -116,7 +119,7 @@
                         SnapsToDevicePixels="True" 
                         Background="#FF008D7A"
                         >
-                    <Button Content="Historik"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200"  FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="Button_Click"/>
+                    <Button Content="Historik"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200"  FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="history_Button"/>
                 </Border>
 
                 <Border CornerRadius="5" Padding="5" 
@@ -124,7 +127,7 @@
                         SnapsToDevicePixels="True" 
                         Background="#FF008D7A"
                         >
-                    <Button Content="Favoritter"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF"/>
+                    <Button Content="Favoritter"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="Favorit_Button"/>
                 </Border>
             </StackPanel>
 
@@ -134,7 +137,7 @@
                         SnapsToDevicePixels="True" 
                         Background="#FF008D7A"
                         >
-                    <Button Content="Indstil RFID"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF"/>
+                    <Button Content="Indstil RFID"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="Antenne_Button"/>
                 </Border>
 
                 <Border CornerRadius="5" Padding="5" 
@@ -142,14 +145,14 @@
                         SnapsToDevicePixels="True" 
                         Background="#FF008D7A"
                         >
-                    <Button Content="Udlån/Aflever"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF"/>
+                    <Button Content="Udlån/Aflever"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="Toggle_Aflevering_Button"/>
                 </Border>
                 <Border CornerRadius="5" Padding="5" 
                         BorderThickness="1" 
                         SnapsToDevicePixels="True" 
                         Background="#FF008D7A"
                         >
-                    <Button Content="Start scanner"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF"/>
+                    <Button Content="Start scanner"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="Start_Scanner"/>
                 </Border>
             </StackPanel>
 
@@ -167,8 +170,6 @@
                  VerticalAlignment="Top"
                  Width="142"
                  Background="White" Grid.Column="1" Grid.Row="1" Margin="0,11,51,0"/>
-
-            <StackPanel Name="EventStackPanel" HorizontalAlignment="Left" Height="190" VerticalAlignment="Top" Width="420" Margin="50,75,0,0" Grid.Row="1"/>
 
         </Grid>
         <Grid Grid.Row="0"
