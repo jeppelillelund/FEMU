@@ -4,17 +4,30 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\pnol.skp\Desktop\FELM\FEMU\FELM\obj\Debug\
+=======
+C:\Users\LSJe.skp\Documents\GitHub\FEMU\FELM\obj\Debug\
+>>>>>>> Aplication
 FELM
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\pnol.skp\Desktop\FELM\FEMU\FELM\App.xaml
 71834538268
 
 13-1674258264
 129-379151490
 EventPage.xaml;LoginPage.xaml;MainPage.xaml;MainWindow.xaml;ScanPage.xaml;Tilføj vare.xaml;UserPage.xaml;
+=======
+C:\Users\LSJe.skp\Documents\GitHub\FEMU\FELM\App.xaml
+6-299094951
+
+121096009455
+1281563165290
+EventPage.xaml;LoginPage.xaml;MainPage.xaml;MainWindow.xaml;ScanPage.xaml;UserPage.xaml;
+>>>>>>> Aplication
 
 False
 
