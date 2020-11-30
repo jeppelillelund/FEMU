@@ -144,5 +144,15 @@ namespace FELM
         {
 
         }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Vare_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

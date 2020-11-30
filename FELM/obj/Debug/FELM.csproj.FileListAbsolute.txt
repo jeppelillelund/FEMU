@@ -223,3 +223,5 @@ C:\Users\WJKa.skp\Desktop\FEMU\FELM\obj\Debug\FELM.csproj.CoreCompileInputs.cach
 C:\Users\WJKa.skp\Desktop\FEMU\FELM\obj\Debug\FELM.csproj.CopyComplete
 C:\Users\pnol.skp\Desktop\FELM\FEMU\FELM\obj\Debug\Tilføj vare.g.cs
 C:\Users\pnol.skp\Desktop\FELM\FEMU\FELM\obj\Debug\Tilføj vare.baml
+C:\Users\SDFa.skp\Documents\FEMU\FEMU\FELM\obj\Debug\Tilføj vare.g.cs
+C:\Users\SDFa.skp\Documents\FEMU\FEMU\FELM\obj\Debug\Tilføj vare.baml
