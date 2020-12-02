@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ScanPage">
-
+  
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="Pic/festival_1.png"/>
@@ -198,13 +198,32 @@
             </Border>
 
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"  Width="174" Height="76" Margin="275,20,84,59" Grid.Column="1" Background="Transparent">
-
                 <Border CornerRadius="5" Padding="5" 
                         BorderThickness="1" 
                         SnapsToDevicePixels="True" 
                         Background="#FF008D7A"
                         >
-                    <Button Content="Historik"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200"  FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="history_Button"/>
+                    <Button Content="Historik"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200"  FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="history_Button">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="Green"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="DarkGoldenrod"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
                 </Border>
 
                 <Border CornerRadius="5" Padding="5" 
@@ -212,7 +231,27 @@
                         SnapsToDevicePixels="True" 
                         Background="#FF008D7A"
                         >
-                    <Button Content="Favoritter"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="Favorit_Button"/>
+                    <Button Content="Favoritter"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="Favorit_Button">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="Green"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="DarkGoldenrod"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
                 </Border>
             </StackPanel>
 
@@ -222,7 +261,27 @@
                         SnapsToDevicePixels="True" 
                         Background="#FF008D7A"
                         >
-                    <Button Content="Indstil RFID"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="Antenne_Button"/>
+                    <Button Content="Indstil RFID"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="Antenne_Button">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="Green"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="DarkGoldenrod"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
                 </Border>
 
                 <Border CornerRadius="5" Padding="5" 
@@ -230,14 +289,54 @@
                         SnapsToDevicePixels="True" 
                         Background="#FF008D7A"
                         >
-                    <Button Content="Udlån/Aflever"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="Toggle_Aflevering_Button"/>
+                    <Button Content="Udlån/Aflever"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="Toggle_Aflevering_Button">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="Green"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="DarkGoldenrod"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
                 </Border>
                 <Border CornerRadius="5" Padding="5" 
                         BorderThickness="1" 
                         SnapsToDevicePixels="True" 
                         Background="#FF008D7A"
                         >
-                    <Button Content="Start scanner"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="Start_Scanner"/>
+                    <Button Content="Start scanner"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="200" FontWeight="Bold" Background="Transparent"  BorderThickness="0" Foreground="#FFFFFF" Click="Start_Scanner">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="Green"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="DarkGoldenrod"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
                 </Border>
             </StackPanel>
 
