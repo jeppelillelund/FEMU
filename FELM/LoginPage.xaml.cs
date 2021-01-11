@@ -29,7 +29,7 @@ namespace FELM
         private async void Login_Button(object sender, RoutedEventArgs e)
         {
             string[] result = { "false" };
-            JObject stringResult = await Api.LoginQueryAsync(LoginTextBox.Text, PasswordTextBox.Text);
+            JObject stringResult = await Api.LoginQueryAsync(LoginTextBox.Text, PasswordTextBox.ToString());
             String status = (string)stringResult.First.First;
             try {
                // result = stringResult[0].First.First;
@@ -37,10 +37,11 @@ namespace FELM
             catch (Exception error) {
                 Console.WriteLine(error);
             }
-
+            
             if (status == "true"){
                 NavigationService.Navigate(Pages.p5);
             }
+
         }
     }
    

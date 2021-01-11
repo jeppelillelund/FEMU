@@ -131,7 +131,7 @@
                     Background="White"
                     Margin="15,1">
 
-                    <TextBox Name="PasswordTextBox" Text="Password1" BorderThickness="0" ></TextBox>
+                    <PasswordBox Name="PasswordTextBox" PasswordChar="*" BorderThickness="0"></PasswordBox>
                 </Border>
                 <Border CornerRadius="5" Padding="5" 
                         BorderThickness="1" 
