@@ -29,7 +29,7 @@ namespace FELM
         private async void Login_Button(object sender, RoutedEventArgs e)
         {
             string[] result = { "false" };
-            JObject stringResult = await Api.LoginQueryAsync(LoginTextBox.Text, PasswordTextBox.ToString());
+            JObject stringResult = await Api.LoginQueryAsync(LoginTextBox.Text, PasswordTextBox.Password.ToString());
             String status = (string)stringResult.First.First;
             try {
                // result = stringResult[0].First.First;
