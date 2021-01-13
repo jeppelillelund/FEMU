@@ -13,5 +13,6 @@ namespace FELM
         public static UserPage p3 = new UserPage();
         public static ScanPage p4 = new ScanPage();
         public static MainPage p5 = new MainPage();
+        public static Vare p6 = new Vare();
     }
 }

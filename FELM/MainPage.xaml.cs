@@ -40,5 +40,10 @@ namespace FELM
             NavigationService.Navigate(Pages.p2);
         }
 
+        private void Button_Click3(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(Pages.p6);
+        }
+
     }
 }
