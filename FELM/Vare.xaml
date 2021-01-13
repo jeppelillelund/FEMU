@@ -62,8 +62,8 @@
         />
             <!--<Button Grid.Row="1" Grid.Column="1" Name="BackBtn" Height="30" Width="100" Content="Back Btn"  Click="BackBtn_Click"></Button>!-->
             <ScrollViewer Grid.Row="1" Grid.Column="0"  VerticalScrollBarVisibility="Auto" Margin="0,-5,0,5">
-            <StackPanel Orientation="Vertical">
-                <Border 
+                <StackPanel Orientation="Vertical">
+                    <Border 
                     Padding="5" 
                     CornerRadius="5" 
                     BorderThickness="1" 
@@ -76,14 +76,14 @@
 
 
 
-                    <TextBox Name="VareNummer"  
+                        <TextBox Name="VareNummer"  
                              Background="Transparent" 
                              BorderThickness="0" Text="Vare Nr"      
                     ></TextBox>
 
-                </Border>
+                    </Border>
 
-                <Border 
+                    <Border 
                     Padding="5" 
                     CornerRadius="5" 
                     BorderThickness="1" 
@@ -96,14 +96,14 @@
 
 
 
-                    <TextBox Name="Beskrivelse"  
+                        <TextBox Name="Beskrivelse"  
                              Background="Transparent" 
                              BorderThickness="0" Text="Beskrivelse"      
                     ></TextBox>
 
-                </Border>
-                
-                <Border 
+                    </Border>
+
+                    <Border 
                     Padding="5" 
                     CornerRadius="5" 
                     BorderThickness="1" 
@@ -116,13 +116,13 @@
 
 
 
-                    <TextBox Name="StikTypeTilgang"  
+                        <TextBox Name="StikTypeTilgang"  
                              Background="Transparent" 
                              BorderThickness="0" Text="Stik Type Tilgang"      
                     ></TextBox>
 
-                </Border>
-                <Border 
+                    </Border>
+                    <Border 
                     Padding="5" 
                     CornerRadius="5" 
                     BorderThickness="1" 
@@ -135,13 +135,13 @@
 
 
 
-                    <TextBox Name="StikTypeAfgang"  
+                        <TextBox Name="StikTypeAfgang"  
                              Background="Transparent" 
                              BorderThickness="0" Text="Stik Type Afgang"      
                     ></TextBox>
 
-                </Border>
-                <Border 
+                    </Border>
+                    <Border 
                     Padding="5" 
                     CornerRadius="5" 
                     BorderThickness="1" 
@@ -154,13 +154,13 @@
 
 
 
-                    <TextBox Name="Ampere"  
+                        <TextBox Name="Ampere"  
                              Background="Transparent" 
                              BorderThickness="0" Text="Ampere"      
                     ></TextBox>
 
-                </Border>
-                <Border 
+                    </Border>
+                    <Border 
                     Padding="5" 
                     CornerRadius="5" 
                     BorderThickness="1" 
@@ -173,13 +173,13 @@
 
 
 
-                    <TextBox Name="Note"  
+                        <TextBox Name="Note"  
                              Background="Transparent" 
                              BorderThickness="0" Text="Note"      
                     ></TextBox>
 
-                </Border>
-                <Border 
+                    </Border>
+                    <Border 
                     Padding="5" 
                     CornerRadius="5" 
                     BorderThickness="1" 
@@ -192,13 +192,13 @@
 
 
 
-                    <TextBox Name="Status"  
+                        <TextBox Name="Status"  
                              Background="Transparent" 
                              BorderThickness="0" Text="Status"      
                     ></TextBox>
 
-                </Border>
-                <Border 
+                    </Border>
+                    <Border 
                     Padding="5" 
                     CornerRadius="5" 
                     BorderThickness="1" 
@@ -211,13 +211,13 @@
 
 
 
-                    <TextBox Name="Antal"  
+                        <TextBox Name="Antal"  
                              Background="Transparent" 
                              BorderThickness="0" Text="Antal"      
                     ></TextBox>
 
-                </Border>
-                <Border 
+                    </Border>
+                    <Border 
                     Padding="5" 
                     CornerRadius="5" 
                     BorderThickness="1" 
@@ -230,13 +230,13 @@
 
 
 
-                    <TextBox Name="VareLokation"  
+                        <TextBox Name="VareLokation"  
                              Background="Transparent" 
                              BorderThickness="0" Text="Lokation"      
                     ></TextBox>
 
-                </Border>
-                <Border 
+                    </Border>
+                    <Border 
                     Padding="5" 
                     CornerRadius="5" 
                     BorderThickness="1" 
@@ -249,12 +249,12 @@
 
 
 
-                    <TextBox Name="PinNummer"  
+                        <TextBox Name="PinNummer"  
                              Background="Transparent" 
                              BorderThickness="0" Text="Pin Nummer" Margin="6,0,-6,0"      
                     ></TextBox>
 
-                </Border>
+                    </Border>
                     <Border 
                     Padding="5" 
                     CornerRadius="5" 
@@ -350,8 +350,9 @@
                     <DropShadowEffect></DropShadowEffect>
                 </Border.Effect>
 
+                <!-- SelectionChanged="Vare_SelectionChanged"-->
                 <Grid>
-                    <DataGrid Name = "Vare" AutoGenerateColumns = "False" Background="Transparent" RowBackground="Transparent" Foreground="{x:Null}" SelectionChanged="Vare_SelectionChanged" BorderBrush="{x:Null}" Margin="10">
+                    <DataGrid Name = "Vare" AutoGenerateColumns = "False" Background="Transparent" RowBackground="Transparent" Foreground="{x:Null}"  BorderBrush="{x:Null}" Margin="10">
 
 
                         <DataGrid.Columns>
@@ -437,8 +438,22 @@
                 </Grid>
             </Border>
 
+            <Border Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="1">
+                <Grid >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
 
+                        <TextBox  Name="seachbox" Width="150" Height="20" Margin="376,122,0,0" />
+
+
+                    </Grid>
+                </Grid>
+            </Border>
         </Grid>
-        
+
     </Grid>
+
 </Page>
