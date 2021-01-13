@@ -18,15 +18,14 @@
         <Grid>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="267*" />
+                <ColumnDefinition Width="533*" />
+
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition Height="3*"/>
-                <RowDefinition />
+                <RowDefinition Height="31*" />
+                <RowDefinition Height="59*"/>
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0"
@@ -52,13 +51,394 @@
         />
             <Grid Grid.Row="1"
               Grid.Column="2"
-        />
+        >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="43*"/>
+                    <RowDefinition Height="47*"/>
+                </Grid.RowDefinitions>
+            </Grid>
             <Grid Grid.Row="2"
               Grid.Column="2"
         />
-            <Button Grid.Row="1" Grid.Column="1" Name="BackBtn" Height="30" Width="100" Content="Back Btn"  Click="BackBtn_Click"></Button>
+            <!--<Button Grid.Row="1" Grid.Column="1" Name="BackBtn" Height="30" Width="100" Content="Back Btn"  Click="BackBtn_Click"></Button>!-->
+            <ScrollViewer Grid.Row="1" Grid.Column="0"  VerticalScrollBarVisibility="Auto" Margin="0,-5,0,5">
+            <StackPanel Orientation="Vertical">
+                <Border 
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    BorderBrush="LightGray" 
+                    SnapsToDevicePixels="True" 
+                    Background="White" 
+                    Margin="15,1"
+                    >
+
+
+
+
+                    <TextBox Name="VareNummer"  
+                             Background="Transparent" 
+                             BorderThickness="0" Text="Vare Nr"      
+                    ></TextBox>
+
+                </Border>
+
+                <Border 
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    BorderBrush="LightGray" 
+                    SnapsToDevicePixels="True" 
+                    Background="White" 
+                    Margin="15,1"
+                    >
+
+
+
+
+                    <TextBox Name="Beskrivelse"  
+                             Background="Transparent" 
+                             BorderThickness="0" Text="Beskrivelse"      
+                    ></TextBox>
+
+                </Border>
+                
+                <Border 
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    BorderBrush="LightGray" 
+                    SnapsToDevicePixels="True" 
+                    Background="White" 
+                    Margin="15,1"
+                    >
+
+
+
+
+                    <TextBox Name="StikTypeTilgang"  
+                             Background="Transparent" 
+                             BorderThickness="0" Text="Stik Type Tilgang"      
+                    ></TextBox>
+
+                </Border>
+                <Border 
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    BorderBrush="LightGray" 
+                    SnapsToDevicePixels="True" 
+                    Background="White" 
+                    Margin="15,1"
+                    >
+
+
+
+
+                    <TextBox Name="StikTypeAfgang"  
+                             Background="Transparent" 
+                             BorderThickness="0" Text="Stik Type Afgang"      
+                    ></TextBox>
+
+                </Border>
+                <Border 
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    BorderBrush="LightGray" 
+                    SnapsToDevicePixels="True" 
+                    Background="White" 
+                    Margin="15,1"
+                    >
+
+
+
+
+                    <TextBox Name="Ampere"  
+                             Background="Transparent" 
+                             BorderThickness="0" Text="Ampere"      
+                    ></TextBox>
+
+                </Border>
+                <Border 
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    BorderBrush="LightGray" 
+                    SnapsToDevicePixels="True" 
+                    Background="White" 
+                    Margin="15,1"
+                    >
+
+
+
+
+                    <TextBox Name="Note"  
+                             Background="Transparent" 
+                             BorderThickness="0" Text="Note"      
+                    ></TextBox>
+
+                </Border>
+                <Border 
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    BorderBrush="LightGray" 
+                    SnapsToDevicePixels="True" 
+                    Background="White" 
+                    Margin="15,1"
+                    >
+
+
+
+
+                    <TextBox Name="Status"  
+                             Background="Transparent" 
+                             BorderThickness="0" Text="Status"      
+                    ></TextBox>
+
+                </Border>
+                <Border 
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    BorderBrush="LightGray" 
+                    SnapsToDevicePixels="True" 
+                    Background="White" 
+                    Margin="15,1"
+                    >
+
+
+
+
+                    <TextBox Name="Antal"  
+                             Background="Transparent" 
+                             BorderThickness="0" Text="Antal"      
+                    ></TextBox>
+
+                </Border>
+                <Border 
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    BorderBrush="LightGray" 
+                    SnapsToDevicePixels="True" 
+                    Background="White" 
+                    Margin="15,1"
+                    >
+
+
+
+
+                    <TextBox Name="VareLokation"  
+                             Background="Transparent" 
+                             BorderThickness="0" Text="Lokation"      
+                    ></TextBox>
+
+                </Border>
+                <Border 
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    BorderBrush="LightGray" 
+                    SnapsToDevicePixels="True" 
+                    Background="White" 
+                    Margin="15,1"
+                    >
+
+
+
+
+                    <TextBox Name="PinNummer"  
+                             Background="Transparent" 
+                             BorderThickness="0" Text="Pin Nummer" Margin="6,0,-6,0"      
+                    ></TextBox>
+
+                </Border>
+                    <Border 
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    BorderBrush="LightGray" 
+                    SnapsToDevicePixels="True" 
+                    Background="White" 
+                    Margin="15,1"
+                    >
+
+
+
+
+                        <TextBox Name="WebshopVarenummer"  
+                             Background="Transparent" 
+                             BorderThickness="0" Text="Webshop varenummer" Margin="6,0,-6,0"      
+                    ></TextBox>
+
+                    </Border>
+                    <Border 
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    BorderBrush="LightGray" 
+                    SnapsToDevicePixels="True" 
+                    Background="White" 
+                    Margin="15,1"
+                    >
+
+
+
+
+                        <TextBox Name="Længde"  
+                             Background="Transparent" 
+                             BorderThickness="0" Text="Længde" Margin="6,0,-6,0"      
+                    ></TextBox>
+
+                    </Border>
+                    <Border 
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    BorderBrush="LightGray" 
+                    SnapsToDevicePixels="True" 
+                    Background="White" 
+                    Margin="15,1"
+                    >
+
+
+
+
+                        <TextBox Name="RFIDNummer"  
+                             Background="Transparent" 
+                             BorderThickness="0" Text="RFID nummer" Margin="6,0,-6,0"      
+                    ></TextBox>
+
+                    </Border>
+                    <Border 
+                    Padding="5" 
+                    CornerRadius="5" 
+                    BorderThickness="1" 
+                    BorderBrush="LightGray" 
+                    SnapsToDevicePixels="True" 
+                    Background="White" 
+                    Margin="15,1"
+                    >
+
+
+
+
+                        <TextBox Name="Favorit"  
+                             Background="Transparent" 
+                             BorderThickness="0" Text="Favorit" Margin="6,0,-6,0"      
+                    ></TextBox>
+
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+            <Border
+                Grid.Row="1"
+                Grid.Column="1"
+                
+                Padding="1" 
+                CornerRadius="25" 
+                BorderThickness="0" 
+                BorderBrush="#FF008D7A" 
+                SnapsToDevicePixels="True"
+                Background="#FF002657"
+                Opacity="0.5"
+                Margin='30'>
+
+                <Border.Effect>
+                    <DropShadowEffect></DropShadowEffect>
+                </Border.Effect>
+
+                <Grid>
+                    <DataGrid Name = "Vare" AutoGenerateColumns = "False" Background="Transparent" RowBackground="Transparent" Foreground="{x:Null}" SelectionChanged="Vare_SelectionChanged" BorderBrush="{x:Null}" Margin="10">
+
+
+                        <DataGrid.Columns>
+
+                            <DataGridTextColumn Width="*" Binding="{Binding VareNummer}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock Text="Vare Nr." TextWrapping="Wrap"/>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Width="*" Binding="{Binding Beskrivelse}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock Text="Beskrivelse" TextWrapping="Wrap"/>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+
+                            <DataGridTextColumn Width="*" Binding="{Binding Antal}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock Text="Antal" TextWrapping="Wrap"/>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+
+                            <DataGridTextColumn Width="*" Binding="{Binding Status}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock Text="Status" TextWrapping="Wrap"/>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Width="*" Binding="{Binding Lokation}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock Text="Lokation" TextWrapping="Wrap"/>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+
+                            <DataGridTextColumn Width="*" Binding="{Binding Ampere}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock Text="Ampere" TextWrapping="Wrap"/>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Width="*" Binding="{Binding PinNummer}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock Text="Pin Nr." TextWrapping="Wrap"/>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Width="*" Binding="{Binding Længde}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock Text="længde" TextWrapping="Wrap"/>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Width="*" Binding="{Binding WebshopNummer}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock Text="Webshop Nr." TextWrapping="Wrap"/>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Width="*" Binding="{Binding RFIDNummer}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock Text="RFID Nr." TextWrapping="Wrap"/>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                            <DataGridTextColumn Width="*" Binding="{Binding Note}">
+                                <DataGridTextColumn.Header>
+                                    <TextBlock Text="Note" TextWrapping="Wrap"/>
+                                </DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+
+                        </DataGrid.Columns>
+                        <DataGrid.ColumnHeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}">
+                                <Setter Property="Background" Value="Transparent" />
+                                <Setter Property="FontWeight" Value="Bold" />
+                                <Setter Property="Foreground" Value="White"/>
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+                    </DataGrid>
+                </Grid>
+            </Border>
+
 
         </Grid>
-
+        
     </Grid>
 </Page>
