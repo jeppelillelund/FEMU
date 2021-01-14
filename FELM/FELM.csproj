@@ -217,6 +217,7 @@
     <Compile Include="Vare.xaml.cs">
       <DependentUpon>Vare.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VareClass.cs" />
     <Page Include="EventPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -107,7 +107,7 @@
 
                     <TextBox Name="VareNummer"  
                              Background="Transparent" 
-                             BorderThickness="0" Text="Vare Nr"      
+                             BorderThickness="0" Text="Vare Nr"
                     ></TextBox>
 
                 </Border>
@@ -380,12 +380,12 @@
                 </Border.Effect>
 
                 <Grid>
-                    <DataGrid Name = "VareGid" AutoGenerateColumns = "False" Background="Transparent" RowBackground="Transparent" Foreground="{x:Null}" SelectionChanged="VareGrid_SelectionChanged" BorderBrush="{x:Null}" Margin="10">
+                    <DataGrid Name = "VareGrid" AutoGenerateColumns = "False" Background="Transparent" RowBackground="Transparent" Foreground="{x:Null}" SelectionChanged="VareGrid_SelectionChanged" BorderBrush="{x:Null}" Margin="10">
 
 
                         <DataGrid.Columns>
 
-                            <DataGridTextColumn Width="*" Binding="{Binding VareNummer}">
+                            <DataGridTextColumn Width="*" Binding="{Binding VareNr}">
                                 <DataGridTextColumn.Header>
                                     <TextBlock Text="Vare Nr." TextWrapping="Wrap"/>
                                 </DataGridTextColumn.Header>
@@ -411,7 +411,7 @@
                                 </DataGridTextColumn.Header>
                             </DataGridTextColumn>
 
-                            <DataGridTextColumn Width="*" Binding="{Binding Lokation}">
+                            <DataGridTextColumn Width="*" Binding="{Binding VareLokation}">
                                 <DataGridTextColumn.Header>
                                     <TextBlock Text="Lokation" TextWrapping="Wrap"/>
                                 </DataGridTextColumn.Header>
@@ -424,7 +424,7 @@
                                 </DataGridTextColumn.Header>
                             </DataGridTextColumn>
 
-                            <DataGridTextColumn Width="*" Binding="{Binding PinNummer}">
+                            <DataGridTextColumn Width="*" Binding="{Binding PinNr}">
                                 <DataGridTextColumn.Header>
                                     <TextBlock Text="Pin Nr." TextWrapping="Wrap"/>
                                 </DataGridTextColumn.Header>

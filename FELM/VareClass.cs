@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FELM
 {
-    class VareClass
+    public class VareClass
     {
         private int _VareNr;
         private string _Beskrivelse;

@@ -21,9 +21,14 @@ namespace FELM
     /// </summary>
     public partial class Vare : Page
     {
+
+        public List<VareClass> Listen = new List<VareClass>();
+
         public Vare()
         {
             InitializeComponent();
+            DummyListe();
+            VareGrid.ItemsSource = Listen;
         }
 
         private void VareGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -31,10 +36,31 @@ namespace FELM
 
         }
 
+        public void DummyListe()
+        {
+            Listen.Add(new VareClass(0, "vare1", "?", "?", 10, "vare1", true, 1, 11, 1234));
+            Listen.Add(new VareClass(1, "vare2", "?", "?", 20, "vare2", false, 2, 22, 1234));
+            Listen.Add(new VareClass(2, "vare3", "?", "?", 30, "vare3", true, 3, 33, 1234));
+            Listen.Add(new VareClass(3, "vare4", "?", "?", 40, "vare4", false, 4, 44, 1234));
+        }
+
+
         private void Kopier_Button(object sender, RoutedEventArgs e)
         {
+            var row = (VareClass)VareGrid.SelectedItem;
+            VareNummer.Text = row.VareNr.ToString();
+            Beskrivelse.Text = row.Beskrivelse;
+            StikTypeTilgang.Text = row.Tilgang;
+            StikTypeAfgang.Text = row.Afgang;
+            Ampere.Text = row.Ampere.ToString();
+            Note.Text = row.Note;
+            Status.Text = row.Status.ToString();
+            Antal.Text = row.Antal.ToString();
+            VareLokation.Text = row.VareLokation.ToString();
+            PinNummer.Text = row.PinNr.ToString();
 
-            List<String> vare = new List<String>();
+
+            /*List<String> vare = new List<String>();
 
             foreach (var panel in VareListe.Children)
             {
@@ -57,7 +83,7 @@ namespace FELM
 
             }
 
-            MessageBox.Show(string.Join(Environment.NewLine, vare));
+            MessageBox.Show(string.Join(Environment.NewLine, vare));*/
 
         }
 
