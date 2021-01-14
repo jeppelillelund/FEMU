@@ -24,5 +24,10 @@ namespace FELM
         {
             InitializeComponent();
         }
+
+        public void redigerVare()
+        {
+            
+        }
     }
 }
