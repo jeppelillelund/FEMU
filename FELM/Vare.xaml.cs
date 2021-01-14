@@ -61,5 +61,9 @@ namespace FELM
 
         }
 
+        public void redigerVare()
+        {
+            
+        }
     }
 }
